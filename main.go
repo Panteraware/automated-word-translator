@@ -28,8 +28,9 @@ func main() {
 	}
 
 	app := &cli.App{
-		Name:  "Automated Word Translator",
-		Usage: "Automatically translate words in the contents of a file",
+		Name:    "Automated Word Translator",
+		Usage:   "Automatically translate words in the contents of a file",
+		Version: version,
 		Authors: []*cli.Author{
 			&cli.Author{
 				Name:  "Konotorii",
