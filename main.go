@@ -9,6 +9,12 @@ import (
 	"time"
 )
 
+var (
+	version = "dev"
+	commit  = "none"
+	date    = "unknown"
+)
+
 func main() {
 	var translateLink string
 	var translateApiKey string
@@ -18,7 +24,7 @@ func main() {
 	var saveLocation string
 
 	cli.VersionPrinter = func(cCtx *cli.Context) {
-		fmt.Printf("version=%s revision=%s\n", "0.0.0", "REV") // TODO
+		fmt.Printf("Version=%s Commit=%s Build Date=%s\n", version, commit, date)
 	}
 
 	app := &cli.App{
