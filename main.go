@@ -89,7 +89,7 @@ func main() {
 			startTime := time.Now()
 
 			for i := 0; i < len(fileStrings); i++ {
-				translated := Translate(c, fileStrings[i], translateApiKey, fromLanguage, toLanguage)
+				translated := Translate(c, Format(fileStrings[i]), translateApiKey, fromLanguage, toLanguage)
 
 				translatedStrings = append(translatedStrings, map[string]string{"original": fileStrings[i], "new": translated})
 
